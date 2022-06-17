@@ -1,11 +1,12 @@
 {
   "name": "dynamix360-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "This app allows users to create and post games/activities for others to join. ## Technologies Used HTML5 CSS3 JavaScript MongoDB Node.js React.js ## Getting Started Link to our trello board: https://trello.com/b/x1XXjdzk/dynamix360 ## Screenshots ![image](https://i.imgur.com/h28CI5Z.png) ![image](https://i.imgur.com/5WRIK7h.png) ![image](https://i.imgur.com/8wLHGS0.png) ![image](https://i.imgur.com/pohG4fa.png)",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +15,19 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "method-override": "^3.0.0",
     "mongoose": "^6.3.8",
     "morgan": "^1.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavisShoup/dynamix360-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DavisShoup/dynamix360-backend/issues"
+  },
+  "homepage": "https://github.com/DavisShoup/dynamix360-backend#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
   }
 }
