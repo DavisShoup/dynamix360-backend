@@ -7,7 +7,7 @@ const { Router } = require("express");
 const createGame = require('../models/createGame.js')
 
 // Games INDEX ROUTE
-router.get("/create", async (req, res) => {
+router.get("/game", async (req, res) => {
     try {
       // send all people
     res.json(await createGame.find({}));
@@ -18,7 +18,7 @@ router.get("/create", async (req, res) => {
   });
 
 // Games CREATE ROUTE
-router.post("/create", async (req, res) => {
+router.post("/game", async (req, res) => {
     try {
       // send all createGame
       res.json(await createGame.create(req.body));
@@ -29,7 +29,7 @@ router.post("/create", async (req, res) => {
   });
 
   // Games DELETE ROUTE
-router.delete("/create/:id", async (req, res) => {
+router.delete("/game/:id", async (req, res) => {
     try {
       // send all create
       res.json(await createGame.findByIdAndRemove(req.params.id));
@@ -40,7 +40,7 @@ router.delete("/create/:id", async (req, res) => {
   });
 
 // Games UPDATE ROUTE
-router.put("/create/:id", async (req, res) => {
+router.put("/game/:id", async (req, res) => {
     try {
       // send all create
       res.json(
