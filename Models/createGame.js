@@ -7,8 +7,8 @@ const createGameSchema = new mongoose.Schema({
     sport: String,
     difficulty: String,
     location: String,
-    date: Number,
-    time: Number,
+    date: String,
+    time: String,
     description: String,
 });
 
