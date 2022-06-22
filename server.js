@@ -2,6 +2,7 @@
 // DEPENDENCIES
 ////////////////////////////////
 require("dotenv").config();
+process.env.API_KEY;
 const cors = require("cors");
 const morgan = require("morgan");
 const router = require('./controllers/createdGames.js')
