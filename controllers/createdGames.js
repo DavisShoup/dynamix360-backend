@@ -6,6 +6,10 @@ const router = express.Router();
 const { Router } = require("express");
 const createGame = require('../models/createGame.js')
 
+router.get("/", async (req,res) => {
+  res.send('Hellllllooooooooo')
+})
+
 // Games INDEX ROUTE
 router.get("/game", async (req, res) => {
     try {
