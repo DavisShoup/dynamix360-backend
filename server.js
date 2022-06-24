@@ -2,14 +2,13 @@
 // DEPENDENCIES
 ////////////////////////////////
 require("dotenv").config();
-process.env.API_KEY;
 const cors = require("cors");
 const morgan = require("morgan");
 const router = require('./controllers/createdGames.js')
 const { PORT = 4000, MONGODB_URL } = process.env;
 const express = require("express");
 const app = express();
-const mongoose = require("mongoose");
+const mongoose = require("mongoose"); 
 const db = mongoose.connection;
 
 
@@ -36,8 +35,6 @@ app.use(cors()); // to prevent cors errors, open access to all origins
 app.use(morgan("dev")); // logging
 app.use(express.json()); // parse json bodies
 app.use('/', router);
-
-
 
 
 ///////////////////////////////
