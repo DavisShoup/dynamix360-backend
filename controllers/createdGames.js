@@ -7,7 +7,7 @@ const { Router } = require("express");
 const createGame = require('../models/createGame.js')
 
 router.get("/", async (req,res) => {
-  res.send('Hellllllooooooooo')
+  res.send('Hellllllooooo')
 })
 
 // Games INDEX ROUTE

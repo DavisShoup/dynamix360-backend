@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-///////////////////////////////
+///////////////////////////////////
 // MODELS
 ////////////////////////////////
 const createGameSchema = new mongoose.Schema({ 
@@ -9,7 +9,7 @@ const createGameSchema = new mongoose.Schema({
     location: String,
     date: String,
     time: String,
-    description: String,
+    description: String, 
 });
 
 const createGame = mongoose.model("Create", createGameSchema);

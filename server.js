@@ -21,6 +21,7 @@ mongoose.connect(MONGODB_URL, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
 });
+
 // Connection Events
 mongoose.connection
 db.on('error', (err) => console.log(err.message + ' is mongodb not running?'));
