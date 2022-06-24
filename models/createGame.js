@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 ///////////////////////////////////
 // MODELS
-//////////////////////////////////
+///////////////////////////////////
 const createGameSchema = new mongoose.Schema({ 
     name: String,
     sport: String,
