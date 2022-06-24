@@ -9,7 +9,6 @@ const { PORT = 4000, MONGODB_URL } = process.env;
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose"); 
-const db = mongoose.connection;
 
 
 
@@ -17,16 +16,16 @@ const db = mongoose.connection;
 // DATABASE CONNECTION
 ////////////////////////////////
 // Establish Connection
-mongoose.connect(MONGODB_URL, {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-});
+mongoose.connect(MONGODB_URL);
 
 // Connection Events
 mongoose.connection
-db.on('error', (err) => console.log(err.message + ' is mongodb not running?'));
-db.on('connected', () => console.log('mongodb connected'));
-db.on('disconnected', () => console.log('mongodb disconnected'));
+.on('connected', () => {
+    console.log('connected to MongoDB.')
+})
+.on('error', (err) => {
+    console.log('Error with MongoDB: ' + err.message)
+});
 
 
 ///////////////////////////////
